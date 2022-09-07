@@ -1,13 +1,60 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package testebiblioteca;
 
-/**
- *
- * @author taris
- */
+import java.util.List;
+
 public class Biblioteca {
+    private String cnpj;
+    private String nome;
+    private List<Livro> livros;
+
+    public Biblioteca() {
+    }
+
+    public Biblioteca(String cnpj, String nome, List<Livro> livros) {
+        this.cnpj = cnpj;
+        this.nome = nome;
+        this.livros = livros;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public List<Livro> getLivros() {
+        return livros;
+    }
+
+    public void setLivros(List<Livro> livros) {
+        this.livros = livros;
+    }
+
+    public void imprimir(){
+        System.out.println(
+            "Biblioteca: \n CNPJ: " + cnpj +
+            "\nNome: " + nome
+            );
+
+        for(Livro li: livros) {
+            li.Imprimir();
+        }
+    }
+
+    
+
+    
+
+    
     
 }
