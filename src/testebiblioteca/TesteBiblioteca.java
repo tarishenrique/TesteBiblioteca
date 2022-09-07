@@ -1,20 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package testebiblioteca;
 
-/**
- *
- * @author taris
- */
-public class TesteBiblioteca {
+import java.util.ArrayList;
+import java.util.List;
 
-    /**
-     * @param args the command line arguments
-     */
+public class TesteBiblioteca {
     public static void main(String[] args) {
-        // TODO code application logic here
+        Livro l1 = new Livro("Capitães de Areia","Jorge Amado", 20, true);
+        Livro l2 = new Livro("Dom Casmurro", "Machado de Assis", 50, false);
+
+        List<Livro> livrosList = new ArrayList<Livro>();
+        livrosList.add(l1);
+        livrosList.add(l2);
+
+        Biblioteca b1 = new Biblioteca();
+        b1.setCnpj("42715266000150");
+        b1.setNome("Biblioteca Geral");
+        b1.setLivros(livrosList);
+
+        b1.imprimir();
+
+        Biblioteca b2 = new Biblioteca("232650002-12", "Biblioteca da Bahia", livrosList);
+        b2.imprimir();
+
+
     }
     
 }
